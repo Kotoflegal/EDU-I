@@ -3,30 +3,30 @@ import requests
 def generate_talking_avatar(video_params):
     api_url = "https://example.com/api/generate_talking_avatar"
     
-    # Sudarome užklausos parametrus su duotais video_params
+    # Construct the request payload with the given video_params
     payload = {
         "model_id": video_params["model_id"],
         "template_id": video_params["template_id"],
         "speaker_id": video_params["speaker_id"],
-        # Kiti parametrai...
+        # Other parameters...
         "text": video_params["text"],
-        # Kiti parametrai...
+        # Other parameters...
     }
 
-    # Siunčiame užklausą į API
+    # Send the request to the API
     response = requests.post(api_url, data=payload)
 
-    # Gavus atsakymą, galime apdoroti rezultatus arba grąžinti, kaip reikia
+    # Process the response or return it as needed
     return response.text
 
-# Pavyzdys kaip galėtų būti naudojamas funkcijos kvietimas:
+# Example of how the function could be used:
 video_params = {
     "model_id": "your_custom_avatar_id",
     "template_id": "your_custom_template_id",
     "speaker_id": "accent_model_id",
-    # Kitos reikšmės...
-    "text": "Jūsų video skriptas čia.",
-    # Kitos reikšmės...
+    # Other values...
+    "text": "Your video script goes here.",
+    # Other values...
 }
 
 result = generate_talking_avatar(video_params)
