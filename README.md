@@ -1,6 +1,5 @@
 [# EDU-I
 Talking Avatar
-](https://en.bomou.com/avatars/api?token={your token}
 &model_id={ your custom AI avatar id}
 &template_id={your custom AI avatar template/style id }
 &speaker_id={ the accent model id}
